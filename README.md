@@ -86,6 +86,8 @@ Enter the following values in the User data field and select Launch instance.
 **Userdata:**
 #!/bin/sh
 ​
+#!/bin/sh
+​
 #Install a LAMP stack
 dnf install -y httpd wget php-fpm php-mysqli php-json php php-devel
 dnf install -y mariadb105-server
@@ -96,22 +98,22 @@ chkconfig httpd on
 systemctl start httpd
 ​
 #Install the web pages for our lab
-if [ ! -f /var/www/html/immersion-day-app-php7.zip ]; then
- cd /var/www/html
- wget -O 'immersion-day-app-php7.zip' 'https://static.us-east-1.prod.workshops.aws/public/ca14f648-293b-43f3-92c2-9575e579efe2/assets/immersion-day-app-php7.zip'
- unzip immersion-day-app-php7.zip
+if [ ! -f /var/www/html/immersion-day-app-php7.zip ]; then
+   cd /var/www/html
+   wget -O 'immersion-day-app-php7.zip' 'https://static.us-east-1.prod.workshops.aws/public/ca14f648-293b-43f3-92c2-9575e579efe2/assets/immersion-day-app-php7.zip'
+   unzip immersion-day-app-php7.zip
 fi
 ​
 #Install the AWS SDK for PHP
-if [ ! -f /var/www/html/aws.zip ]; then
- cd /var/www/html
- mkdir vendor
- cd vendor
- wget https://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.zip
- unzip aws.zip
+if [ ! -f /var/www/html/aws.zip ]; then
+   cd /var/www/html
+   mkdir vendor
+   cd vendor
+   wget https://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.zip
+   unzip aws.zip
 fi
-
-# Update existing packages
+​
+#Update existing packages
 dnf update -y
 ​
 
