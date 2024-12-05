@@ -1,8 +1,7 @@
 # AWS-GeneralImmersionDay-Compute
 
----
+# Introduction:
 
-Introduction:
 We've been exploring AWS services through videos and tutorials, but the real magic happens when we roll up our sleeves and get hands-on! Practical experience gives us a deeper understanding of the services. Today, we'll kick-start a series of hands-on exercises covering foundational AWS services.
 Here's a sneak peek at the services we'll explore:
 
@@ -20,14 +19,16 @@ Here's a sneak peek at the services we'll explore:
 
 **Provisioning:** AWS CloudFormation
 
-Our end goal? Designing a three-tier architecture with these services. In this blog, let's dive into AWS Compute - specifically Amazon EC2 - and learn how to create scalable and resilient systems. Just a note this will be a big article as we have to cover many services, but it's worth going through and understand how services are working when it is tied together!
+**Our end goal?** Designing a three-tier architecture with these services. In this blog, let's dive into AWS Compute - specifically Amazon EC2 - and learn how to create scalable and resilient systems. Just a note this will be a big article as we have to cover many services, but it's worth going through and understand how services are working when it is tied together!
 
-**AWS Compute:** The Engine of Your Applications
+# AWS Compute: The Engine of Your Applications
 Compute is where all the processing magic happens. Think of it as the engine in your car - it powers everything. AWS provides a variety of compute services tailored for different workloads:
 
 **EC2:** Virtual servers for general-purpose computing.
-Lambda: Serverless computing to run code without provisioning servers.
-ECS/EKS/Fargate: Services for running containerized applications.
+
+**Lambda:** Serverless computing to run code without provisioning servers.
+
+**ECS/EKS/Fargate:** Services for running containerized applications.
 
 In this hands-on session, we'll focus on Amazon EC2 - a flexible, scalable service that lets you launch virtual machines (VMs) in the cloud.
 
