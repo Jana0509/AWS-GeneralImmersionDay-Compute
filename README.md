@@ -419,6 +419,5 @@ If you've got this far, thanks for reading! I hope it was worthwhile to you.
 
 Signing off!
 Jana
-
-![image](https://github.com/user-attachments/assets/05b0681d-9e4c-4abd-b32f-e8fa81ce6b5f)
+https://linkedin.com/in/janarthanan-ravikumar%E2%98%81%EF%B8%8F-3674b8101
 
