@@ -82,8 +82,8 @@ Click the Meta Data version dropdown and select V2 only (token required)
 
 Enter the following values in the User data field and select Launch instance.
 
----------------------------------------------------------------------------------------------------------------
-Userdata:
+
+**Userdata:**
 #!/bin/sh
 ​
 #Install a LAMP stack
@@ -113,8 +113,9 @@ fi
 
 # Update existing packages
 dnf update -y
---------------------------------------------------------------------------------------------------------------------------------------------------
 ​
+
+
 
 6. Once the instance is provisioned, you can find the instance details under instance tab. In details section, you can find the public IPV4 address and public IPV4 DNS name also.
 
