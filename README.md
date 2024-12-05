@@ -5,6 +5,7 @@
 Introduction:
 We've been exploring AWS services through videos and tutorials, but the real magic happens when we roll up our sleeves and get hands-on! Practical experience gives us a deeper understanding of the services. Today, we'll kick-start a series of hands-on exercises covering foundational AWS services.
 Here's a sneak peek at the services we'll explore:
+
 **Compute:** Amazon EC2
 **Network:** Amazon VPC
 **Security:** AWS IAM
