@@ -195,6 +195,7 @@ In real time scenario, for creating many VMs with pre-installed software, it is 
 
 
 6. Once you are done entering the details above, click on Next. On the next page, "Configure stack options", you can leave "Tags", "Permissions", and "Advanced options" as default and select Next.
+
 7. In the Review Page, review all the details and click submit.
 
 ![image](https://github.com/user-attachments/assets/f28b1251-46c0-4fe0-8abc-19a9571222e2)
@@ -211,6 +212,7 @@ Here, we have created the AMI [Amazon Machine Image] with web server installed 
 ---
 
 # GENERATE THE CUSTOM AMI OF THE WEB SERVER CREATED IN THE EC2 - LINUX LAB:
+
 Now we have a instance running with the web server to host our website. Now we will create the Image of the web host that will be used for the autoscaling group to create multiple instances using the web server.
 
 1. In the EC2 Console under Instances, you can create Amazon Machine Images (AMIs) from either running or stopped instances. Return to or open the EC2 console.
@@ -233,6 +235,7 @@ We are done with our new Amazon Machine Image for now, we can now move on to set
 ---
 
 # CREATE A Auto Scaling SECURITY GROUP :
+
 Before we get into setting up our Launch Template we will need to setup a special Security Group for our Auto Scaling Group. A security group provides instance (virtual machine) level protection.
 1. Give Security group name and select the VPC and don't provide any inbound and outbound rules as of now. We will create it later.
 
@@ -319,6 +322,7 @@ Review and Create it.
 ---
 
 # CREATE LOAD BALANCER SECURITY GROUPS:
+
 When our load balancer was provisioned it was setup with the default security group in our VPC. To allow access to the load balancer via the public DNS, we will need to create and attach a security group to allow inbound traffic on port 80 from the internet.
 
 As a best practice, we will also create an outbound rule that restricts outgoing traffic from the load balancer to only be sent to hosts using the Auto Scaling Security Group.
@@ -348,6 +352,7 @@ f. You security group configuration should look similar to the image below. Sele
 ---
 
 # Attach your new Load Balancer Security group to your Load Balancer:
+
  a. On the EC2 service page left side menu find "**Load Balancing**" and select Load Balancers. Select the load balancer you created. Make sure the State is "**Active**".
  b. Under the "**Description**" tab scroll down to the "**Security**" section and click on Edit security groups.
  c. Select the box to the left of your new load balancer sg named [Your Initials]-SG-Load-Balancer
@@ -359,7 +364,8 @@ f. You security group configuration should look similar to the image below. Sele
 
 ---
 
-# Add Inbound Rule to the Auto Scaling Security Group
+# Add Inbound Rule to the Auto Scaling Security Group:
+
 1. We will need to setup a rule to only allow traffic from the new Load Balancer Security Group to the Auto Scaling Security Group. This will be one of the layers of protection that will prevent our webhosts from being directly accessed from the internet.
  
  a. On the **EC2 service page** left side menu under **"Network & Security"** select Security Groups.
@@ -385,6 +391,7 @@ Return to your the load balancers page by selecting Load Balancers from the left
 ---
 
 # TESTING THE AUTOSCALING GROUP:
+
  Testing Your Auto Scaling Group and Load Balancer
 Follow these steps to test your Auto Scaling setup and ensure it's working:
 
